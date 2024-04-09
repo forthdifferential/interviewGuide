@@ -13,7 +13,7 @@ Nlog(N)
 
 
 
-![image-20231129194812476](images_typora/image-20231129194812476.png)
+![image-20231129194812476](./images_typora/image-20231129194812476.png)
 
 ```java
 import java.util.Scanner;
@@ -80,7 +80,7 @@ O(N)
 
 快选借用快排的思想，但是只需要选一边递归，不需要递归两段
 
-![image-20231203201547629](images_typora/image-20231203201547629.png)
+![image-20231203201547629](./images_typora/image-20231203201547629.png)
 
 ```cpp
 #include <iostream>
@@ -166,7 +166,7 @@ int main(){
 
 #### 2.1 求逆序对
 
-![image-20230701112303895](images_typora/image-20230701112303895.png)
+![image-20230701112303895](./images_typora/image-20230701112303895.png)
 
 当q[j]加入归并的下一个值时，q[i]之前的数都小于等于q[j],q[i]之后的数都大于q[j]。
 
@@ -473,7 +473,7 @@ S[x2, y2] - S[x1 - 1, y2] - S[x2, y1 - 1] + S[x1 - 1, y1 - 1]
 
 差分和前缀和是逆运算。如果B数组是A数组的前缀和，那么A是B的差分，也就是 a[i] = b[i] - b[i-1];
 
-![image-20230703154057652](images_typora/image-20230703154057652.png)
+![image-20230703154057652](./images_typora/image-20230703154057652.png)
 
 * 首先是假想一个B数组是差分数组，使得a = f(b)。 b[i] = a[i] - a[i-1]; b[1] = a[1];
 * 差分不用考虑差分数组的构造，直接插一遍元素就行insert(i, i, a[i])。因为按照原理，假定a数组最开始全是0，那么一开始b就是a的差分数组，对于每一个a[i]，相当于插入一个数，只不过是插入的范围是 i 到 i。
@@ -709,7 +709,7 @@ int main(){
 ### 11. 区间合并
 
 * 记得先排序
-* <img src="images_typora/image-20230817202643204.png" alt="image-20230817202643204" style="zoom: 67%;" />
+* <img src="./images_typora/image-20230817202643204.png" alt="image-20230817202643204" style="zoom: 67%;" />
 
 ```cpp
 // 将所有存在交集的区间合并
@@ -1021,7 +1021,7 @@ for (int i = 0; i < n; i ++ )
 
 求ne，就是自己和自己匹配。
 
-<img src="images_typora/image-20230820173834633.png" alt="image-20230820173834633" style="zoom:67%;" />
+<img src="./images_typora/image-20230820173834633.png" alt="image-20230820173834633" style="zoom:67%;" />
 
 ```cpp
 // s[]是长文本，p[]是模式串，n是s的长度，m是p的长度
@@ -1208,7 +1208,7 @@ int query(char str[])
 
 > ### 手写一个堆:
 >
-> ![image-20230823194751577](images_typora/image-20230823194751577.png)
+> ![image-20230823194751577](./images_typora/image-20230823194751577.png)
 >
 > ### 性质：
 >
@@ -1221,7 +1221,7 @@ int query(char str[])
 >
 > * 2*0=0，建堆从1开始做
 >
-> <img src="images_typora/image-20230823193137584.png" alt="image-20230823193137584" style="zoom:50%;" />
+> <img src="./images_typora/image-20230823193137584.png" alt="image-20230823193137584" style="zoom:50%;" />
 
 ```cpp
 // h[N]存储堆中的值, h[1]是堆顶，x的左儿子是2x, 右儿子是2x + 1
@@ -1730,7 +1730,7 @@ bool topsort()
 
 ​		多源汇最短路 ：多个起点
 
-<img src="images_typora/image-20230830200055804.png" alt="image-20230830200055804" style="zoom: 80%;" />
+<img src="./images_typora/image-20230830200055804.png" alt="image-20230830200055804" style="zoom: 80%;" />
 
 n 表示点的数量；m 表示边的数量
 
@@ -1746,7 +1746,7 @@ O(N^2)
 
 **用于稠密图**， m比较大的，边多的题
 
-![image-20230830230521422](images_typora/image-20230830230521422.png)
+![image-20230830230521422](./images_typora/image-20230830230521422.png)
 
 ```cpp
 int g[N][N];  // 存储每条边
@@ -1791,7 +1791,7 @@ O(mlogn + m)
 
 
 
-![image-20230830230548970](images_typora/image-20230830230548970.png)
+![image-20230830230548970](./images_typora/image-20230830230548970.png)
 
 
 
@@ -1850,7 +1850,7 @@ O(mn)
 
 有负权回路的图，可能没有最短路，因为如果环的总数是负数，那最短路可能是负无穷
 
-![image-20230831093704532](images_typora/image-20230831093704532.png)
+![image-20230831093704532](./images_typora/image-20230831093704532.png)
 
 ```cpp
 int n, m;       // n表示点数，m表示边数
@@ -1896,7 +1896,7 @@ int bellman_ford()
 
 > spfa算法还可以都处理正负权边，一般情况比Dijkstra算法还快，但是出题人可能会卡最坏情况，那就需要用堆优化的Dijkstra
 
-![image-20230831104652423](images_typora/image-20230831104652423.png)
+![image-20230831104652423](./images_typora/image-20230831104652423.png)
 
 长的有点像Dijkstra算法
 
@@ -2024,7 +2024,7 @@ void floyd()
 
 稠密图一般用朴素Prim， 稀疏图用Kruskal
 
-![image-20230831160453170](images_typora/image-20230831160453170.png)
+![image-20230831160453170](./images_typora/image-20230831160453170.png)
 
 
 
@@ -2249,7 +2249,7 @@ O(sqrt(n))
 
 **原理**：i能整除n，那么n/i也能整除n，都是成对出现的，那只需要枚举小的那个数
 
-![image-20230903102942949](images_typora/image-20230903102942949.png)
+![image-20230903102942949](./images_typora/image-20230903102942949.png)
 
 只需要枚举到根号n就行
 
@@ -2475,7 +2475,7 @@ int gcd(int a, int b)
 
 欧拉函数：1∼N 中与 N 互质的数的个数被称为欧拉函数，记为 ϕ(N)
 
-![image-20230917163504029](images_typora/image-20230917163504029.png)
+![image-20230917163504029](./images_typora/image-20230917163504029.png)
 
 ```cpp
 int phi(int x)
@@ -2540,7 +2540,7 @@ void get_eulers(int n)
 
 O(n∗logb)
 
-![image-20230917193732649](images_typora/image-20230917193732649.png)
+![image-20230917193732649](./images_typora/image-20230917193732649.png)
 
 求 m^k mod p，时间复杂度 O(logk)。
 
@@ -2578,7 +2578,7 @@ int qmi(int m, int k, int p)
 
 
 
-![image-20230918152324736](images_typora/image-20230918152324736.png)
+![image-20230918152324736](./images_typora/image-20230918152324736.png)
 
 ```cpp
 #include <iostream>
@@ -2649,7 +2649,7 @@ int exgcd(int a, int b, int &x, int &y)
 
 #### exgcd 解线性同余方程
 
-![image-20230918162458417](images_typora/image-20230918162458417.png)
+![image-20230918162458417](./images_typora/image-20230918162458417.png)
 
 ```cpp
 #include <iostream>
@@ -2706,7 +2706,7 @@ O(N^3)
 
 划成上三角矩阵，然后判断解的情况：唯一解、 无解、 去穷多解
 
-![image-20230918123313198](images_typora/image-20230918123313198.png)
+![image-20230918123313198](./images_typora/image-20230918123313198.png)
 
 
 
@@ -2764,9 +2764,9 @@ int gauss()
 
 组合数的递推式：
 
-![image-20230918150726826](images_typora/image-20230918150726826.png)
+![image-20230918150726826](./images_typora/image-20230918150726826.png)
 
-![image-20230918144949695](images_typora/image-20230918144949695.png)
+![image-20230918144949695](./images_typora/image-20230918144949695.png)
 
 
 
@@ -2912,9 +2912,9 @@ SG(x) = mex({SG(y1), SG(y2), …, SG(yk)})
 
 
 
-<img src="images_typora/image-20230918193126642.png" alt="image-20230918193126642" style="zoom:50%;" />
+<img src="./images_typora/image-20230918193126642.png" alt="image-20230918193126642" style="zoom:50%;" />
 
-<img src="images_typora/image-20230918193144601.png" alt="image-20230918193144601" style="zoom:50%;" />
+<img src="./images_typora/image-20230918193144601.png" alt="image-20230918193144601" style="zoom:50%;" />
 
  集合-Nim游戏 只能取 集合s[N]中任意值的数量石子
 
@@ -3009,7 +3009,7 @@ int main()
 
 dp\[i][w] 表示对于前i个物品，容量为w的背包的最大价值
 
-![image-20230910172307983](images_typora/image-20230910172307983.png)
+![image-20230910172307983](./images_typora/image-20230910172307983.png)
 
 1.  按照状态找：
     dp\[i\]\[w\] 表示对于前i个物品，容量为w的背包的最大价值
@@ -3075,7 +3075,7 @@ int main()
 
 每种物品都有无限件可用
 
-![image-20230910172234542](images_typora/image-20230910172234542.png)
+![image-20230910172234542](./images_typora/image-20230910172234542.png)
 
 1. 状态计算： `f[i,j] = max (f[i - 1][j - v[i]*k] + w[i] * k)`
 
@@ -3314,7 +3314,7 @@ int main()
 
 #### 蒙德里安的梦想
 
-![image-20230912154928390](images_typora/image-20230912154928390.png)
+![image-20230912154928390](./images_typora/image-20230912154928390.png)
 
 状态压缩dp： 把状态用二进制数表示: 
 
@@ -3633,7 +3633,7 @@ int main()
 
 右端点排序
 
-![image-20231001152658115](images_typora/image-20231001152658115.png)
+![image-20231001152658115](./images_typora/image-20231001152658115.png)
 
 证明： AnS <= cnt && Ans >=cnt
 
@@ -3744,7 +3744,7 @@ int main()
 
 
 
-![image-20231030154947280](images_typora/image-20231030154947280.png)
+![image-20231030154947280](./images_typora/image-20231030154947280.png)
 
 
 
@@ -3811,7 +3811,7 @@ int main()
 
 
 
-![image-20231030191242868](images_typora/image-20231030191242868.png)
+![image-20231030191242868](./images_typora/image-20231030191242868.png)
 
 
 
@@ -3895,7 +3895,7 @@ int main()
 
 
 
-![image-20231030194543290](images_typora/image-20231030194543290.png) 
+![image-20231030194543290](./images_typora/image-20231030194543290.png) 
 
 1. 最小的两个点，深度一定是最深，且可以互为兄弟
 2. 最小的两个点合并能得到最优解， 再往后求n-1哈夫曼树的问题，继续合并最小两个点
@@ -4049,7 +4049,7 @@ int main()
 
 您的任务是确定奶牛的排序，使得所有奶牛的风险值中的最大值尽可能的小。
 
-![image-20231030232512353](images_typora/image-20231030232512353.png)
+![image-20231030232512353](./images_typora/image-20231030232512353.png)
 
 
 
@@ -4431,7 +4431,7 @@ TCP怎么优化
 
 整个字符串矩阵转90度，等价于对角线对称互换+竖中轴对称互换
 
-![image-20231202155118687](images_typora/image-20231202155118687.png)
+![image-20231202155118687](./images_typora/image-20231202155118687.png)
 
 
 
