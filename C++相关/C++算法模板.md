@@ -13,7 +13,7 @@ Nlog(N)
 
 
 
-![image-20231129194812476](./images_typora/image-20231129194812476.png)
+![image-20231129194812476](images_typora/image-20231129194812476.png)
 
 ```java
 import java.util.Scanner;
