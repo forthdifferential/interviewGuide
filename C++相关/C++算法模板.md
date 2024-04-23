@@ -1098,6 +1098,55 @@ int query(char str[])
 }
 ```
 
+```cpp
+class Trie {
+public:
+    struct Node{
+        Node* son[26];
+        bool is_end;
+        Node(){
+            for(int i = 0 ;i < 26; i++)  son[i] = nullptr;
+            is_end = false;
+        }
+    }* root;
+    Trie() {
+        root = new Node();
+    }
+    
+    void insert(string word) {
+        auto p = root;
+        for(auto s: word){
+            int u = s - 'a';
+            if (p->son[u] == nullptr) p->son[u] = new Node();
+            p = p->son[u];
+        }
+        p->is_end = true;
+    }
+    
+    bool search(string word) {
+        auto p = root;
+        for(auto s : word){
+            int  u = s - 'a';
+            if (p->son[u] == nullptr) return false;
+            else p = p->son[u];
+        }
+        return p->is_end;
+    }
+    
+    bool startsWith(string prefix) {
+        auto p = root;
+        for(auto s : prefix){
+            int  u = s - 'a';
+            if (p->son[u] == nullptr) return false;
+            else p = p->son[u];
+        }
+        return true;
+    }
+};
+```
+
+
+
 ### 9. 并查集
 
 > ### 作用： 
